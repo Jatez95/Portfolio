@@ -1,0 +1,484 @@
+
+:root{
+    --skills-bar-lenght:0%;
+    --border-radius:.4em;
+}
+html,body{
+    background:linear-gradient(rgba(129, 129, 129, 0.1), rgb(0, 0, 0));
+    background-color: #240438;
+    background-repeat:no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #c7c7c7;
+}
+
+*{
+    box-sizing: border-box;
+}
+.main{
+    display: grid;
+    gap: 0.5em;
+    width:100%;
+    float: left;
+    text-align: center;
+    margin-top: 3%;
+
+}
+@media screen and (min-width:720px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+.card{
+    padding: 1em;
+    background-color: #1c1c1c;
+    border-radius: var(--border-radius);
+}
+a{
+    text-decoration: none;
+    color:#ffffff;
+}
+.column{
+    display: grid;
+    gap: .5em;
+}
+@media screen and (min-width:720px) {
+    .three-columns{
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: start;
+    }
+    .two-columns{
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+}
+@media screen and (max-width:720px) {
+    .column{
+       width: 100%;
+    }
+}
+h2{
+    color: #ffffff;
+    font-weight: bold;
+}
+h3{
+    color: #ffffff;
+    font-weight: bold;
+}
+/*header*/
+.the-header {
+    height: 75px;
+    width: 100%;
+    background: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-menu-icon {
+    display: flex;
+    align-items: center;
+    margin: 1%;
+}
+
+.item-header {
+    width: 30px;
+}
+
+.hamburguer-icon {
+    cursor: pointer;
+    display: block;
+    width: 30px;
+}
+
+.flags {
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.item-flag {
+    width: 30px;
+}
+
+.flag-img {
+    cursor: pointer;
+    display: block;
+}
+
+.leave-a-space{/*Esto solo hace que las banderas esten bien centradas*/
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+/*end of header*/
+
+/*left menu*/
+#btn-menu{
+    display: none;
+}
+.container-menu{
+    position:fixed;
+    background: rgba(0, 0, 0, 0.5) ;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3;
+}
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 220px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: absolute;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+    z-index: 2;
+}
+#btn-menu:checked ~ .container-menu .cont-menu{
+    transform: translateX(0%);
+}
+.cont-menu nav{
+    transform: translateY(15%);
+}
+.cont-menu nav a{
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    cursor: pointer;
+}
+.close-icon{
+    width: 20px;
+}
+/*end of left menu*/
+
+/*presentation thing*/
+.presentation{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.portofolio_image{
+    width:100px;
+    height:100px;
+    border-radius:150px;
+    margin-right: 2%;
+}
+.nameParagraph{
+    color: #ffffff;
+    font-size: 300%;
+    font-weight: bold;
+    margin-top: 2%;
+}
+
+.descriptionP-container{
+    color: #ffffff;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 150%;
+    margin-top: 5%;
+    margin-right: 20%;
+    margin-left: 25%;
+}
+
+@media screen and (max-width:720px){
+    .presentation {
+        width: 100%; /* ajustar para pantallas pequenias */
+    }
+    .portofolio_image {
+        width: 80px; /* ajusta la imagen */
+        height: 80px;
+        margin-top: 5%;
+    }
+    .nameParagraph {
+        font-size: 200%; /* ajusta el texto para pantallas pequenias */
+        margin-top: 1%; 
+    }
+    .descriptionP-container {
+        width: 90%; /* ajusta la descripcion al tamaño de la pantalla*/
+        margin: 5% auto;
+        font-size: 120%;
+    }
+}
+@media screen and (max-width: 720px) {
+    .presentation {
+        margin-top: 30%;
+    }
+}
+/*contact thing*/
+.contactDiv{
+    color: #ffffff;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+@media screen and (max-width:720px){
+    .contactDiv{
+        width: 90%;
+        margin: 5%; 
+        font-size: 85%;
+    }
+}
+/*end of contact thing*/
+/*end of presentation*/
+
+/*Languages*/
+
+.card-languages{
+    margin: 0;
+    align-self: center;
+    justify-self: center;
+    width: 75%;
+    display: block;
+    text-align: left;
+}
+.card-language-title{
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 0;
+}
+.experience-time{
+    text-align: left;
+    color: #c7c7c7;
+    margin-left: 2%;
+}
+.skills{
+    padding: 1em 0;
+}
+
+.skills-header{
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+    margin-left: auto;
+    color: #c7c7c7;
+}
+.skills-tech{
+    margin: 0;
+    font-size: 0.8rem;
+}
+.skills-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #c7c7c7;
+    margin-bottom: 0.5em;
+}
+.skills-bar, .skills-bar::after{
+    width: 140px;
+    height: 8px;
+    position: static;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.skills-bar::after{
+    content: '';
+    display:block;
+    position: relative;
+    left: -140px;
+    background-color: #360753;
+    transition: var(#240438);
+    animation: skills-bar-fill 2s ease-in-out forwards;
+}
+.skill-bar--10::after{
+    --skills-bar-lenght:10%;
+}
+.skill-bar--20::after{
+    --skills-bar-lenght:20%;
+}
+.skill-bar--30::after{
+    --skills-bar-lenght:30%;
+}
+.skill-bar--40::after{
+    --skills-bar-lenght:40%;
+}
+.skill-bar--50::after{
+    --skills-bar-lenght:50%;
+}
+.skill-bar--60::after{
+    --skills-bar-lenght:60%;
+}
+.skill-bar--70::after{
+    --skills-bar-lenght:70%;
+}
+.skill-bar--80::after{
+    --skills-bar-lenght:80%;
+}
+.skill-bar--90::after{
+    --skills-bar-lenght:90%;
+}
+
+@keyframes skills-bar-fill{
+    to{
+        transform: translateX(var(--skills-bar-lenght));
+    }
+}
+@media screen and (max-width:720px){
+    .card-languages{
+        align-self: center;
+        width: 90%;
+        margin: 0;
+    }
+}
+/*end of languages*/
+.experince-title{
+    color: #ffffff;
+    font-size: 300%;
+    margin-top: 2%;
+}
+.experience-knowledege-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.job-experience-container,
+.knowledge-container {
+    width: 75%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    .experince-title{
+        font-size: 150%; /* ajusta el texto para pantallas pequenias */
+        margin-top: 10%; 
+    }    
+    
+    .job-experience-container,
+    .knowledge-container {
+        width: 100%;
+    }
+}
+/*End of Experience*/
+
+/*Projects*/
+.project-card{
+    background-color: #1c1c1c;
+    width: 25%;
+    padding: 0.5em;
+    justify-self: center;
+    display: flex;
+    border-radius: var(--border-radius);
+    gap: 10px;
+    margin-bottom: 2%;
+    text-align: start;
+}
+.project-container{
+    width: auto;
+    height: auto;
+    width: 100%;
+    justify-self: start;
+    border-radius: var(--border-radius);
+}
+
+.container-image{
+    justify-self: start;
+    border-radius: var(--border-radius);
+    margin: 0;
+}
+.container-image img{
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+.imageDescriptionOverlay{
+    width: 100%;
+    font-size: 75%;
+    align-content: start;
+}
+.languages{
+    justify-content: space-around;
+    align-items:start;
+    justify-content: start;
+    display: flex;
+    padding: 0.5em;
+}
+
+.languages img{
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    margin-left: 0;
+}
+.language-used{
+    justify-content: space-around;
+    align-items:end;
+    height: 10%;
+    width: auto;
+    margin-left: 0;
+}
+
+.button-container{
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.button-project{
+    justify-self: center;
+    align-content: center;
+    background-color: transparent;
+    border-radius: var(--border-radius);
+    border-color: #240438;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+.button-project:hover{
+    background-color: #360753;
+}
+@media screen and (max-width: 720px) {
+    .project-card {
+        width: 100%;
+        padding: 0.5em;
+    }
+
+    .container-image img {
+        width: 100%; /* Make image take full width */
+    }
+
+    .button-container {
+        margin-top: 10px; /* Adding some space between image and button */
+    }
+}
+/*End of Projects*/

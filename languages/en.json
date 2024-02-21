@@ -1,0 +1,46 @@
+{
+    "leftMenu":{
+        "about-me":"About me",
+        "projects":"Projects",
+        "cv":"See CV"
+    },
+    
+    "programming":{
+        "languaje":"Database",
+        "experienceTime":"Years of experience"
+    },
+
+    "nameParagraph": {
+        "saludos":"Hi, I'm Javier Mateos"
+    },
+
+    "descriptionP-container":{
+        "descriptionP":"Full-Stack developer who has just graduated from a higher degree of DAM, eager to continue learning and something less important i like to do exercise."
+    },
+
+    "contactDiv":{
+        "contact":"Contact: mateossanchezjavier@gmail.com"
+    },
+
+    "experienceAndKnowledge":{
+        "job-experience":"WORK EXPERIENCE/TRAINING"
+    },
+    "experience-knowledege-container":{
+            "firstJob-title":"Network installer",
+            "description-firstjob":"In Sylcom networks and telecommunications I did the job of network installer I learned a lot about internet cabling, wireless networks, fiber optics, assembly of servers and equipment. I was there from March 2021 to June 2021.",
+            "secondjob-title":"Full-Stack Developer",
+            "description-secondjob":"At Gomez Group I did an upgrade of a smart reading system using Java, JavaScript, Html, CSS. I was from September to December 2023.",
+            "relevant-knowledgefirst-title":"Higher degree of Multiplatform Software Development",
+            "relevant-knowledgefirst-desc":"I studied at IES Federica Montseny, where I learned to program with Java and a little bit of Kotlin. I also expanded my knowledge of HTML and CSS.",
+            "relevant-knowledgesecond-title":"Intermediate level of Microcomputer Systems and Networks",
+            "relevant-knowledgesecond-desc":"I studied at La Salle Griñón, where I learned about markup language, such as HTML and CSS. I also learned how a computer works, how to assemble them, maintain them and their components, as well as networking."
+    },
+
+    "projects":{
+        "projectTitle":"PROJECTS DEVELOPED"
+    },
+    "imageDescriptionOverlay":{
+        "description-project":"Project developed with Kotlin using Jetpack Compose, using the arquitecture MVVM and connected to the service using retrofit.",
+        "button-text":"Know More"
+    }
+}
